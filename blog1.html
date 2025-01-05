@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditrachman23</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: "Pirata One", serif;
+        }
+    </style>
+
+</head>
+
+
+
+<div class="bg-black  px-6 py-32 lg:px-8">
+    <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
+        <a href="index.html" class="text-white"><p class="text-gray-300"><b>⾕ Kembali ke Index</b></p></a>
+        
+        <p class="text-base/7 font-semibold text-indigo-600">nah lho opo iki</p>
+        <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl tracking-wide">Menghubungkan file Excel Lokal ke R Markdown</h1>
+        <p class="mt-6 text-xl/8 text-gray-300">Menghubungkan file untuk data set di r markdwon caranya gampang betul coy
+            cukup dengan satu library saja bisa langsung enjoy nikmatin data set di r markdown biasanya cara ini enak banget buat olah data gitu.
+        </p>
+        <div class="mt-10 max-w-2xl text-white">
+            <p>Gunakan library readxl untuk menghubungkan R markdown ke Excel. Jika belum terinstall, jalankan perintah
+            berikut:</p><br>
+
+        <div class="relative bg-gray-800 text-white p-4 rounded-lg">
+           
+<code
+    class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <span class="flex gap-4">
+                    <span class="flex-1">
+                        <span >
+                            > <span class="text-yellow-400">install.package("readxl")</span>
+                        </span>
+                    </span>
+                </span>
+            
+               
+            </code>
+
+        </div>
+            <p class="mt-8">Membaca File Excel Gunakan fungsi read_excel() untuk membaca file Excel:</p><br>
+            <code
+                class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <span class="flex gap-4">
+                    <span class="flex-1">
+                        <span >
+                            <span class="text-red-600">```{r}</span><br>
+                            library<span class="text-yellow-400">(readxl)</span>
+                            <br>
+                            
+                            <span class="text-yellow-400"># Membaca file Excel</span><br>
+                            file_path <- <span class="text-green-300">"path/to/your/file.xlsx" </span><span class="text-yellow-400"># Ganti dengan path file </span> <br>
+                        data <- read_excel(file_path) <br><span class="text-yellow-400"># Menampilkan data</span><br>
+                                print(data)
+                                <br>
+<span class="text-red-600">```</span>
+                        </span>
+                    </span>
+                </span>
+            
+               
+            </code>
+
+            <p class="mt-6">kalau mau membaca Sheet Tertentu
+            di file Excel yang punya banyak sheet, tinggal tambahkan code ini</p><br>
+            <code
+                class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                            <span class="flex gap-4">
+                                <span class="flex-1">
+                                    <span >
+                                        <span class="text-red-600">```{r}</span><br>
+                                    data_sheet2 <- read_excel(file_path, sheet=<span class="text-green-300">"Sheet2"</span> ) <br>
+                                    print(data_sheet2)
+                                        <br>
+            <span class="text-red-600">```</span>
+                                    </span>
+                                </span>
+                            </span>
+                        
+                           
+                        </code>
+                        <p class="mt-6">Kalau mau membaca Rentang Sel Tertentu di spreadsheet
+                        kalian tinggal masukin range nya sel nya saja contoh codenya kek gini:</p><br>
+                        <code
+                            class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                                                    <span class="flex gap-4">
+                                                        <span class="flex-1">
+                                                            <span >
+                                                                <span class="text-red-600">```{r}</span><br>
+                                                        data_range <- read_excel(file_path, range=<span class="text-green-300">"A1:C10"</span> )<br>
+                                                         print(data_range)<br>
+                                    <span class="text-red-600">```</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                
+                                                   
+                                                </code>
+
+
+            <p class="mt-10">Anjay sekian tutorial nya dari blog yang gak bakal ada yang baca ini see u in another tutorial anjay</p>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+</html>
